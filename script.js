@@ -8,13 +8,17 @@
 
 let btn = document.querySelector("button");
 let answer = document.querySelector("#answer");
+let inPrincipal = document.querySelector("#principal");
+let inRate = document.querySelector("#interest-rate");
+let inFrequency = document.querySelector("#frequency");
+let inPeriod = document.querySelector("#period");
 
 function calculate() {
     // variables from input
-    let P = Number(document.querySelector("#principal").value);
-    let r = Number(document.querySelector("#interest-rate").value) / 100;
-    let n = Number(document.querySelector("#frequency").value);
-    let t = Number(document.querySelector("#period").value);
+    let P = Number(inPrincipal.value);
+    let r = Number(inRate.value) / 100;
+    let n = Number(inFrequency.value);
+    let t = Number(inPeriod.value);
     let A;
     let diff;
     let outA;
@@ -30,9 +34,7 @@ function calculate() {
 
     // output final amount
     outA = new Intl.NumberFormat('en-CA', {style: 'currency', currency: 'CAD'}).format(A);
-    // outDiff = "$" + diff.toFixed(2);
     outDiff = new Intl.NumberFormat('en-CA', {style: 'currency', currency: 'CAD'}).format(diff);
-    // outP = "$" + P.toFixed(2);
     outP = new Intl.NumberFormat('en-CA', {style: 'currency', currency: 'CAD'} ).format(P);
     answer.innerHTML = 
         "You started with: " + outP +
