@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script async defer src="./script.js"></script>
+</head>
+<body>
+    <h1>Calculate My Return</h1>
+    <form>
+        <p>
+            A simple app for calculating possible investment returns.
+        </p>
+        <div>
+            <label for="principal">Starting principal: </label>
+            <input type="number" name="principal" id="principal" required>
+        </div>
+        <div>
+            <div>
+                <label for="interest-rate">Assumed annual interest/return rate: </label>
+                <input type="number" name="interest-rate" id="interest-rate" required>%
+            </div>
+            
+            <div>
+                Compounds: 
+                <select name="frequency" id="frequency">
+                    <option value="" selected>--- Please select a frequency ---</option>
+                    <option value="12">Monthly</option>
+                    <option value="4">Quarterly</option>
+                    <option value="2">Semiannually</option>
+                    <option value="1">Annually</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <label for="period">I'm investing for <input type="number" name="period" id="period"> year(s).</label>
+        </div>
+        <div>
+            <button type="submit">Calculate</button>
+        </div>
+    </form>
+    <p id="answer"></p>
+</body>
+</html>
